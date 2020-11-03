@@ -52,10 +52,11 @@ checaErro(transmissor2, receptor2errado) # Retorna mensagem com erro
 print('\nTeste 3 -> 00011')
 transmissor3 = '00011'
 receptor3correto = '000110'
-receptor3errado = '000111'
+receptor3errado = '110000'
 
+# A verificação de paridade é falha neste caso
 checaErro(transmissor3, receptor3correto) # Retorna mensagem com erro
-checaErro(transmissor3, receptor3errado) # Retorna mensagem sem erro
+checaErro(transmissor3, receptor3errado) # Retorna mensagem com erro
 
 
 
