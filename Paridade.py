@@ -23,9 +23,9 @@ def paridade(sequencia):
 def checaErro(original, enviado):
     
     if (paridade(original) == paridade(enviado)):
-        print('Erro na Paridade')
+        print('Erro de Paridade encontrado')
     else:
-        print('A paridade nao possui erro')
+        print('Erro de Paridade nao encontrado')
 
 ### TESTES (Exemplos) ###
 
@@ -39,14 +39,23 @@ checaErro(transmissor1, receptor1correto) # Retorna mensagem sem erro
 checaErro(transmissor1, receptor1errado) # Retorna mensagem com erro
 
 # Teste 2
-print('Teste 2 -> 001111')
+print('\nTeste 2 -> 001111')
 transmissor2 = '001111'
 receptor2correto = '0011110'
 receptor2errado = '0011111'
 
-checaErro(transmissor1, receptor1correto) # Retorna mensagem sem erro
-checaErro(transmissor1, receptor1errado) # Retorna mensagem com erro
+checaErro(transmissor2, receptor2correto) # Retorna mensagem sem erro
+checaErro(transmissor2, receptor2errado) # Retorna mensagem com erro
 
+# Teste 3
+# Neste exemplo temos um erro de verificacao usando paridade.
+print('\nTeste 3 -> 00011')
+transmissor3 = '00011'
+receptor3correto = '000110'
+receptor3errado = '000111'
+
+checaErro(transmissor3, receptor3correto) # Retorna mensagem com erro
+checaErro(transmissor3, receptor3errado) # Retorna mensagem sem erro
 
 
 
